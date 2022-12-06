@@ -17,18 +17,27 @@ class Pantry extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.max,
-          children: [const Text(
-            'Pantry Ingredients',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0,
-                color: Colors.black87),
-          ),
+          children: [
+            const Text(
+              'Pantry Ingredients',
+              style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30.0,
+                  color: Colors.black87),
+            ),
             const SizedBox(
               height: 30.0,
             ),
             ElevatedButton(
-              onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => Add()));}, child: const Text('Add Ingredients'),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Add()));
+              },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green[200],
+                  shape: const StadiumBorder()),
+              child: const Text('Add Ingredients'),
             ),
           ],
         ),
